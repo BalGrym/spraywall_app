@@ -11,16 +11,16 @@ exports.getAllBlocs = (req, res, next) => {
 };
 
 exports.createBloc = (req, res, next) => {
-  console.log(req.body);
   db.Bloc.create({
     tags: req.body.tags,
     difficulty: req.body.difficulty,
     userId: req.body.userId,
+    image: req.body.image,
   })
-    .then((blocCreated) => res.send(blocCreated))
-    .catch((err) => {
-      if (err) {
-        console.log(err);
-      }
+    .then(() => {
+      res.status(201).json({ message: "Bloc enregistré !" });
+    })
+    .catch((error) => {
+      res.status(400).json({ error });
     });
 };

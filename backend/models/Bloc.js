@@ -14,6 +14,21 @@ module.exports = (sequelize, DataTypes) => {
         notEmpty: true,
       },
     },
+    //allowNull to be changed
+    image: {
+      type: DataTypes.BLOB,
+      allowNull: true,
+    },
+    //type to be changed to json ? ["1", "2", "3" ...] // allownull to be changed
+    like: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    //type to be changed to json ? ["1", "2", "3" ...] // allownull to be changed
+    finished: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
     userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
