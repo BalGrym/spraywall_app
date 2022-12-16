@@ -69,6 +69,10 @@ button:focus-visible {
   padding: 2em;
 }
 
+.home img {
+  max-width: 230px;
+}
+
 #app {
   max-width: 1280px;
   margin: 0 auto;

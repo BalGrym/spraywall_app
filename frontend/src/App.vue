@@ -1,9 +1,16 @@
 <template>
-  <router-link to="/">Home</router-link> ||
-  <router-link to="/about">About</router-link>
-  <router-view></router-view>
+  <TheNaviguation />
+  <div class="container">
+    <router-view></router-view>
+  </div>
 </template>
 
-<script></script>
+<script>
+import TheNaviguation from "./components/TheNaviguation.vue";
+
+export default {
+  components: { TheNaviguation },
+};
+</script>
 
 <style scoped></style>
